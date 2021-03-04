@@ -22,37 +22,33 @@ export default function imagesReducer(
   state = initialState,
   action: ImagesActions
 ): ImagesState {
-  try {
-    switch (action.type) {
-      case SET_FETCH_IMAGES_LOADING:
-        const { loading } = action
-        return {
-          ...state,
-          loading
-        }
-      case SET_FETCH_IMAGES_ERROR:
-        const { errorMessage } = action
-        return {
-          ...state,
-          errorMessage
-        }
-      case SET_FETCH_IMAGES_SUCCESS:
-        const { images } = action
-        return {
-          ...state,
-          images
-        }
-      case SELECT_IMAGE:
-        const { image } = action
-        return {
-          ...state,
-          selectedImage: image,
-          previousSelectedImage: state.selectedImage
-        }
-      default:
-        return state
-    }
-  } catch (e) {
-    return state
+  switch (action.type) {
+    case SET_FETCH_IMAGES_LOADING:
+      const { loading } = action
+      return {
+        ...state,
+        loading
+      }
+    case SET_FETCH_IMAGES_ERROR:
+      const { errorMessage } = action
+      return {
+        ...state,
+        errorMessage
+      }
+    case SET_FETCH_IMAGES_SUCCESS:
+      const { images } = action
+      return {
+        ...state,
+        images
+      }
+    case SELECT_IMAGE:
+      const { image } = action
+      return {
+        ...state,
+        selectedImage: image,
+        previousSelectedImage: state.selectedImage
+      }
+    default:
+      return state
   }
 }
