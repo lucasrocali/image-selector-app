@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { StyleSheet, FlatList, SafeAreaView, View, Image, TouchableOpacity, Text, ActivityIndicator } from 'react-native'
+import { FlatList, SafeAreaView, View, Image, TouchableOpacity, Text, ActivityIndicator } from 'react-native'
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs'
 import { connect } from 'react-redux'
 import { fetchImages, selectImage } from 'src/store/images/actions'
