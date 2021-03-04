@@ -19,10 +19,17 @@ export interface SetFetchImagesErrorAction extends Action {
   errorMessage: string;
 }
 
-export type ImagesActions = | FetchImagesAction | SetFetchImagesLoadingAction | SetFetchImagesSuccessAction | SetFetchImagesErrorAction
+export interface SelectImageAction extends Action {
+  type: string;
+  image: string;
+}
+
+export type ImagesActions = | FetchImagesAction | SetFetchImagesLoadingAction | SetFetchImagesSuccessAction | SetFetchImagesErrorAction | SelectImageAction
 
 export interface ImagesState {
   images: string[]
   loading: boolean
   errorMessage: string
+  selectedImage: string
+  previousSelectedImage: string
 }

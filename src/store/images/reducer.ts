@@ -8,10 +8,12 @@ import {
   SET_FETCH_IMAGES_SUCCESS
 } from './actionTypes'
 
-const initialState: ImagesState = {
+export const initialState: ImagesState = {
   images: [],
   loading: false,
-  errorMessage: ''
+  errorMessage: '',
+  selectedImage: '',
+  previousSelectedImage: '',
 }
 
 //reducer

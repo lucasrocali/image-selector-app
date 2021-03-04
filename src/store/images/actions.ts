@@ -2,13 +2,15 @@ import {
   FetchImagesAction,
   SetFetchImagesLoadingAction,
   SetFetchImagesSuccessAction,
-  SetFetchImagesErrorAction
+  SetFetchImagesErrorAction,
+  SelectImageAction
 } from './types'
 import {
   FETCH_IMAGES,
   SET_FETCH_IMAGES_LOADING,
   SET_FETCH_IMAGES_SUCCESS,
-  SET_FETCH_IMAGES_ERROR
+  SET_FETCH_IMAGES_ERROR,
+  SELECT_IMAGE
 } from './actionTypes'
 
 //actions
@@ -36,5 +38,12 @@ export function setFetchImagesError(errorMessage: string): SetFetchImagesErrorAc
   return {
     type: SET_FETCH_IMAGES_ERROR,
     errorMessage
+  }
+}
+
+export function selectImage(image: string): SelectImageAction {
+  return {
+    type: SELECT_IMAGE,
+    image
   }
 }
