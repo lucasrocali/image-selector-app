@@ -1,4 +1,4 @@
 
 export type RootTabParamList = {
-  Home: undefined;
-};
+  Home: undefined
+}

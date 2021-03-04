@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { RootTabParamList } from 'src/utils/types'
 import Home from 'src/screens/Home'
 
-const MainTabNavigator = createBottomTabNavigator<RootTabParamList>();
+const MainTabNavigator = createBottomTabNavigator<RootTabParamList>()
 
 export default function RootNavigation() {
   return (
