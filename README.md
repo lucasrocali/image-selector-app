@@ -6,7 +6,7 @@
 
 `git clone https://github.com/lucasrocali/image-selector-app.git`
 
-`cd note-app`
+`cd image-selector-ap`
 
 ### Installing
 
