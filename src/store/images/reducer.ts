@@ -5,7 +5,8 @@ import {
 import {
   SET_FETCH_IMAGES_LOADING,
   SET_FETCH_IMAGES_ERROR,
-  SET_FETCH_IMAGES_SUCCESS
+  SET_FETCH_IMAGES_SUCCESS,
+  SELECT_IMAGE
 } from './actionTypes'
 
 export const initialState: ImagesState = {
@@ -40,6 +41,13 @@ export default function imagesReducer(
         return {
           ...state,
           images
+        }
+      case SELECT_IMAGE:
+        const { image } = action
+        return {
+          ...state,
+          selectedImage: image,
+          previousSelectedImage: state.selectedImage
         }
       default:
         return state
