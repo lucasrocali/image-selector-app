@@ -23,7 +23,7 @@ function SelectedImage(props: SelectedImageProps) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Image style={styles.image} source={{ uri: selectedImage }} />
+      {selectedImage ? <Image style={styles.image} source={{ uri: selectedImage }} /> : null}
     </SafeAreaView>
   )
 }

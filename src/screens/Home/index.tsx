@@ -70,6 +70,7 @@ function Home(props: HomeProps) {
         data={images}
         renderItem={renderItem}
         extraData={selectedImage}
+        keyExtractor={(image) => image}
       />
     </SafeAreaView>
   )
